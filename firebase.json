@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "Learning-Angular-Firebase",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
