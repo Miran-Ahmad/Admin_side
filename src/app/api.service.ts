@@ -8,7 +8,8 @@ export class ApiService {
   firestore = inject(Firestore);
 
   async getAllData() {
-    const querySnapshot = await getDocs(collection(this.firestore, 'data'));
+    const colRef = collection(this.firestore, 'products');
+    const querySnapshot = await getDocs(colRef);
     return querySnapshot.docs.map((doc) => ({
       ...doc.data(),
       id: doc.id,
