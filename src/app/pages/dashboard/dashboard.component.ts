@@ -4,18 +4,18 @@ import { ApiService } from 'src/app/api.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent {
-
-  constructor(public apiService:ApiService){
-this.getData()
+  public data: any;
+  constructor(public apiService: ApiService) {
+    this.getData().then((products) => {
+      console.log(products);
+    });
   }
 
-  async getData(){
-    const productData = await this.apiService.getAllData();
-    console.log(productData);
-    
+  public async getData() {
+    this.data = await this.apiService.getProducts();
+    return this.data;
   }
-
 }

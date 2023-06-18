@@ -9,9 +9,12 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { EditProductComponent } from './pages/dashboard/edit-product/edit-product.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent],
+  declarations: [AppComponent, DashboardComponent, EditProductComponent, HeaderComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

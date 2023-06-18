@@ -8,4 +8,7 @@ import { ApiService } from './api.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  constructor(){
+    
+  }
 }
