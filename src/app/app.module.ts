@@ -9,12 +9,13 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { EditProductComponent } from './pages/dashboard/edit-product/edit-product.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { CreateProductsComponent } from './pages/dashboard/create-products/create-products.component';
+import { EditProductsComponent } from './pages/dashboard/edit-products/edit-products.component';
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, EditProductComponent, HeaderComponent, FooterComponent],
+  declarations: [AppComponent, DashboardComponent, HeaderComponent, FooterComponent, CreateProductsComponent, EditProductsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

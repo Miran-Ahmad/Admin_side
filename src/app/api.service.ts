@@ -6,6 +6,7 @@ import {
   doc,
   getDoc,
   getDocs,
+  updateDoc,
 } from '@angular/fire/firestore';
 
 @Injectable({
@@ -40,5 +41,12 @@ export class ApiService {
       ...snap.data(),
       id: snap.id,
     };
+  }
+  public async updateProduct(id, value) {
+    const colRef = collection(this.firestore, 'data');
+    const docRef = doc(colRef, id);
+    return await updateDoc(docRef,value);
+
+    
   }
 }

@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { EditProductComponent } from './pages/dashboard/edit-product/edit-product.component';
+import { CreateProductsComponent } from './pages/dashboard/create-products/create-products.component';
+import { EditProductsComponent } from './pages/dashboard/edit-products/edit-products.component';
 
 const routes: Routes = [
   {
@@ -9,12 +10,12 @@ const routes: Routes = [
     component: DashboardComponent,
   },
   {
-    path: 'dashboard',
-    component: DashboardComponent,
+    path: 'create-products',
+    component: CreateProductsComponent,
   },
   {
-    path: 'dashboard/edit-product',
-    component: EditProductComponent,
+    path: 'edit-products/:id',
+    component: EditProductsComponent,
   }
 ];
 

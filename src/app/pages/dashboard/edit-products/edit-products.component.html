@@ -1,0 +1,87 @@
+<div class="container pt-5">
+  <div class="row">
+    <div class="col">
+      <form [formGroup]="form">
+        <div class="row">
+          <div class="col">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control border border-dark"
+                id="name"
+                placeholder="Name of Product"
+                formControlName="name"
+                [ngModel]="productData.name"
+              />
+              <div class="text-danger" *ngIf="name.touched && name.errors">
+                Invalid name
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="mb-3">
+              <label for="author" class="form-label">Author</label>
+              <input
+                type="text"
+                class="form-control border border-dark"
+                id="author"
+                placeholder="Name of Author"
+                formControlName="author"
+                [ngModel]="productData.author"
+              />
+              <div class="text-danger" *ngIf="author.touched && author.errors">
+                Invalid Author
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <input
+                type="text"
+                class="form-control border border-dark"
+                id="description"
+                placeholder="Description of Product"
+                formControlName="description"
+                [ngModel]="productData.description"
+              />
+
+              <div
+                class="text-danger"
+                *ngIf="description.touched && description.errors"
+              >
+                Invalid description
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="mb-3">
+              <label for="price" class="form-label">Price (in ₹)</label>
+              <input
+                type="number"
+                class="form-control border border-dark"
+                id="price"
+                placeholder="Price (in numbers)"
+                formControlName="price"
+                [ngModel]="productData.price"
+              />
+              <div class="text-danger" *ngIf="price.touched && price.errors">
+                Invalid price
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+        (click)="update()"
+          class="btn btn-success"
+        >
+          Update
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
