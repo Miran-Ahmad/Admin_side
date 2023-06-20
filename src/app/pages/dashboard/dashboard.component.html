@@ -12,6 +12,7 @@
     <table class="table table-light table-striped">
       <thead>
         <tr>
+          <th>Sl No.</th>
           <th>BOOK</th>
           <th>AUTHOR</th>
           <th>DESCRIPTION</th>
@@ -21,7 +22,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let pd of data">
+        <tr *ngFor="let pd of data; let i = index">
+          <th scope="row">{{i + 1}}</th>
           <td>{{ pd.name }}</td>
           <td>{{ pd.author }}</td>
           <td>{{ pd.description }}</td>
@@ -56,7 +58,7 @@
             <button
               type="button"
               class="btn btn-danger btn-sm"
-              routerLink="edit-products"
+              (click) = "delData(pd.id)"
             >
               <!-- Delete -->
 

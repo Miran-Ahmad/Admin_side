@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ApiService } from 'src/app/api.service';
 })
 export class DashboardComponent {
   public data: any;
-  constructor(public apiService: ApiService) {
+  constructor(public apiService: ApiService, public router: Router) {
     this.getData().then((products) => {
       console.log(products);
     });
@@ -17,5 +18,17 @@ export class DashboardComponent {
   public async getData() {
     this.data = await this.apiService.getProducts();
     return this.data;
+  }
+  public async delData(pid) {
+    this.apiService
+      .delProduct(pid)
+      .then(() => {
+        alert('The item has been Deleted!');
+        this.getData();
+        this.router.navigate(['']);
+      })
+      .catch((err) => {
+        alert('' + err);
+      });
   }
 }

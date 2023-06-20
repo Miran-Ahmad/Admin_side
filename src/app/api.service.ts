@@ -3,6 +3,7 @@ import {
   Firestore,
   addDoc,
   collection,
+  deleteDoc,
   doc,
   getDoc,
   getDocs,
@@ -45,8 +46,9 @@ export class ApiService {
   public async updateProduct(id, value) {
     const colRef = collection(this.firestore, 'data');
     const docRef = doc(colRef, id);
-    return await updateDoc(docRef,value);
-
-    
+    return await updateDoc(docRef, value);
+  }
+  public async delProduct(pid){
+    await deleteDoc(doc(this.firestore, 'data', pid));
   }
 }
