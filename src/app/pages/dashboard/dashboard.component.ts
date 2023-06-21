@@ -23,7 +23,7 @@ export class DashboardComponent {
     this.apiService
       .delProduct(pid)
       .then(() => {
-        alert('The item has been Deleted!');
+        // alert('The item has been Deleted!');
         this.getData();
         this.router.navigate(['']);
       })
