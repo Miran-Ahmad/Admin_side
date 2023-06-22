@@ -48,7 +48,7 @@ export class ApiService {
     const docRef = doc(colRef, id);
     return await updateDoc(docRef, value);
   }
-  public async delProduct(pid){
+  public async delProduct(pid) {
     await deleteDoc(doc(this.firestore, 'data', pid));
   }
 }
