@@ -2,7 +2,7 @@
   "targets": {
     "learning-angular-firebas-ce0f8": {
       "hosting": {
-        "Learning-Angular-Firebase": [
+        "Admin_side": [
           "learning-angular-firebas-ce0f8"
         ]
       }

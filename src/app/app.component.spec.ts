@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Learning-Angular-Firebase'`, () => {
+  it(`should have as title 'Admin_side'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Learning-Angular-Firebase');
+    expect(app.title).toEqual('Admin_side');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Learning-Angular-Firebase app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Admin_side app is running!');
   });
 });

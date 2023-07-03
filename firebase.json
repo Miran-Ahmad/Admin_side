@@ -1,7 +1,7 @@
 {
   "hosting": [
     {
-      "target": "Learning-Angular-Firebase",
+      "target": "Admin_side",
       "source": ".",
       "frameworksBackend": {}
     }
