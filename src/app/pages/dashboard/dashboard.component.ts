@@ -25,7 +25,7 @@ export class DashboardComponent {
       .then(() => {
         this.getData();
         this.router.navigate(['']);
-        alert('The item has been Deleted!');
+        // alert('The item has been Deleted!');
       })
       .catch((err) => {
         alert('' + err);
